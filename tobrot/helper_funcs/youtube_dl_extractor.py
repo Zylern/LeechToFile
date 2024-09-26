@@ -114,7 +114,7 @@ async def extract_youtube_dl_formats(url, yt_dl_user_name, yt_dl_pass_word, user
                     else:
                         if format_string is not None and not "audio only" in format_string:
                             ikeyboard = [
-                                pyrogram.InlineKeyboardButton(
+                                pyrogram.types.InlineKeyboardButton(
                                     dipslay_str_uon,
                                     callback_data=(cb_string_video).encode("UTF-8")
                                 )

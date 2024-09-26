@@ -65,7 +65,7 @@ async def incoming_message_f(client, message):
         # start the aria2c daemon
         aria_i_p = await aria_start()
         LOGGER.info(aria_i_p)
-        current_user_id = message.from_user.id
+        current_user_id = message.from_user
         # create an unique directory
         new_download_location = os.path.join(
             DOWNLOAD_LOCATION,
@@ -162,7 +162,7 @@ async def incoming_youtube_dl_f(client, message):
     LOGGER.info(cf_name)
     if dl_url is not None:
         await i_m_sefg.edit_text("<b>extracting links</b>")
-        current_user_id = message.from_user.id
+        current_user_id = message.from_user
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
         # create download directory, if not exist

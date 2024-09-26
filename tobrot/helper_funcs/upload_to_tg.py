@@ -37,7 +37,7 @@ from tobrot import (
     INDEX_LINK
 )
 
-from pyrogram import (
+from pyrogram.types import (
     InputMediaDocument,
     InputMediaVideo,
     InputMediaAudio
